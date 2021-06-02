@@ -11,4 +11,5 @@
     <color name="colorDanger">#C55330</color>
     <color name="colorDangerGradEnd">#EA987E</color>
     <color name="colorWarning">#EAF218</color>
+    <color name="colorWarningGradEnd">#F7FB7F</color>
 </resources>
