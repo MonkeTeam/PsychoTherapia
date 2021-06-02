@@ -8,6 +8,7 @@
     <color name="colorSecondaryGradEnd">#40698A</color>
     <color name="colorInfo">#EADEDA</color>
     <color name="colorInfoGradEnd">#F4F4F4</color>
-    <color name="colorDanger">#D1603D</color>
+    <color name="colorDanger">#C55330</color>
+    <color name="colorDangerGradEnd">#EA987E</color>
     <color name="colorWarning">#EAF218</color>
 </resources>
