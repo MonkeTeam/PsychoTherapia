@@ -1,4 +1,4 @@
-package com.monke.psychotherapia;
+package com.MonkeTeam.psychotherapia;
 
 import org.junit.Test;
 
