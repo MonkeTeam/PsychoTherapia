@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.MonkeTeam.psychotherapia.utils.ui.ButtonUI;
+import com.MonkeTeam.psychotherapia.utils.ui.FontUI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,19 +36,25 @@ public class MainActivity extends AppCompatActivity {
 
         Button login_button = findViewById(R.id.main_login_button);
         Button signup_button = findViewById(R.id.main_signup_button);
+        TextView title = findViewById(R.id.main_title);
 
         ButtonUI.makePrimary(this, login_button, ButtonUI.PACIFICO, false);
         ButtonUI.makeSecondary(this, signup_button, ButtonUI.PACIFICO, false);
+
+        FontUI.makePacifio(this, title);
     }
 
     public void hideLoadingFragment()
     {
         Fragment loading_overlay_fragment = getSupportFragmentManager().findFragmentById(R.id.overlay_frame_container_view);
 
-        getSupportFragmentManager().beginTransaction()
-                .setCustomAnimations(0, R.anim.fade_out)
-                .hide(loading_overlay_fragment)
-                .commit();
+        if(loading_overlay_fragment != null)
+        {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(0, R.anim.fade_out)
+                    .hide(loading_overlay_fragment)
+                    .commit();
+        }
 
     }
 }
