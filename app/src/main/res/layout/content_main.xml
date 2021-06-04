@@ -18,8 +18,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="440dp"
-            android:layout_height="289dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -37,15 +38,47 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+        <Button
+            android:id="@+id/main_login_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="46dp"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/main_signup_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/secondary_button"
+            android:fontFamily="@font/pacifico_regular"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_login_button" />
+
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/overlay_frame_container_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="408dp"
+            android:layout_height="150dp"
             android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
         </androidx.fragment.app.FragmentContainerView>
 

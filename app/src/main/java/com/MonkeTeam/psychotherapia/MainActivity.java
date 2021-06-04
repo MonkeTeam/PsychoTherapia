@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.widget.Button;
+
+import com.MonkeTeam.psychotherapia.utils.ui.ButtonUI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
                 hideLoadingFragment();
             }
         }, 2000);
+
+        Button login_button = findViewById(R.id.main_login_button);
+
+        ButtonUI.makePrimary(this, login_button, ButtonUI.PACIFICO, false);
+
     }
 
     public void hideLoadingFragment()
