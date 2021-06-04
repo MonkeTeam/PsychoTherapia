@@ -33,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
         }, 2000);
 
         Button login_button = findViewById(R.id.main_login_button);
+        Button signup_button = findViewById(R.id.main_signup_button);
 
         ButtonUI.makePrimary(this, login_button, ButtonUI.PACIFICO, false);
-
+        ButtonUI.makeSecondary(this, signup_button, ButtonUI.PACIFICO, false);
     }
 
     public void hideLoadingFragment()
