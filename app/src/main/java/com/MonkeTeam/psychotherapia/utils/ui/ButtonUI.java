@@ -12,8 +12,6 @@ public class ButtonUI
     public static final int NORMAL = 0;
     public static final int PACIFICO = 1;
 
-    private static final String pacifico_path = "fonts/pacifico_regular.ttf";
-
     public static void makePrimary(
             Context context,
             Button button,
@@ -52,11 +50,9 @@ public class ButtonUI
 
     private static Typeface getTypeFace(final Context context, final int font_choice)
     {
-        Typeface typeface;
-
         if(font_choice == ButtonUI.PACIFICO)
         {
-            return Typeface.createFromAsset(context.getAssets(), ButtonUI.pacifico_path);
+            return Typeface.createFromAsset(context.getAssets(), FontUI.pacifico_path);
         }
         return null;
     }
