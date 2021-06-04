@@ -12,4 +12,6 @@
     <color name="colorDangerGradEnd">#EA987E</color>
     <color name="colorWarning">#EAF218</color>
     <color name="colorWarningGradEnd">#F7FB7F</color>
+
+    <color name="bg_primary">#E6E7EA</color>
 </resources>

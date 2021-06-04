@@ -42,8 +42,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="46dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="46dp"
+            android:elevation="4dp"
             android:text="@string/login"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,24 +58,13 @@
             android:layout_marginStart="46dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="46dp"
+            android:elevation="4dp"
             android:text="@string/sign_up"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_login_button" />
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/overlay_frame_container_view"
-            android:layout_width="408dp"
-            android:layout_height="150dp"
-            android:clickable="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </androidx.fragment.app.FragmentContainerView>
 
         <TextView
             android:id="@+id/textView2"
@@ -88,6 +78,21 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_signup_button" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/overlay_frame_container_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:elevation="9999dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="true">
+
+        </androidx.fragment.app.FragmentContainerView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

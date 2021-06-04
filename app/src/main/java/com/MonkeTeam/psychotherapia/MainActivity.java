@@ -3,12 +3,17 @@ package com.MonkeTeam.psychotherapia;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.MonkeTeam.psychotherapia.auth.LoginActivity;
 import com.MonkeTeam.psychotherapia.utils.ui.ButtonUI;
 import com.MonkeTeam.psychotherapia.utils.ui.FontUI;
 
@@ -42,19 +47,43 @@ public class MainActivity extends AppCompatActivity {
         ButtonUI.makeSecondary(this, signup_button, ButtonUI.PACIFICO, false);
 
         FontUI.makePacifio(this, title);
+
+        login_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginClicked();
+            }
+        });
     }
 
     public void hideLoadingFragment()
     {
         Fragment loading_overlay_fragment = getSupportFragmentManager().findFragmentById(R.id.overlay_frame_container_view);
+        Log.e("ASD", "attempting to remove fragment");
 
         if(loading_overlay_fragment != null)
         {
             getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(0, R.anim.fade_out)
-                    .hide(loading_overlay_fragment)
+                    .remove(loading_overlay_fragment)
                     .commit();
+
+            (new Handler(Looper.getMainLooper())).postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Log.e("ASD", "Removing from view - " + android.R.integer.config_shortAnimTime);
+                    View fragment_container = findViewById(R.id.overlay_frame_container_view);
+                    ((ViewGroup) fragment_container.getParent()).removeView(fragment_container);
+                }
+            }, 200);
         }
 
+    }
+
+    private void loginClicked()
+    {
+        Intent login_intent = new Intent(this, LoginActivity.class);
+
+        startActivity(login_intent);
     }
 }
