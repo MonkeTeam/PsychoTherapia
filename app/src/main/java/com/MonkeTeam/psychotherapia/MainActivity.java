@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.MonkeTeam.psychotherapia.auth.LoginActivity;
+import com.MonkeTeam.psychotherapia.auth.SignupActivity;
 import com.MonkeTeam.psychotherapia.utils.ui.ButtonUI;
 import com.MonkeTeam.psychotherapia.utils.ui.FontUI;
 
@@ -54,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
                 loginClicked();
             }
         });
+        signup_button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                signupClicked();
+            }
+        });
     }
 
     public void hideLoadingFragment()
@@ -85,5 +94,12 @@ public class MainActivity extends AppCompatActivity {
         Intent login_intent = new Intent(this, LoginActivity.class);
 
         startActivity(login_intent);
+    }
+
+    private void signupClicked()
+    {
+        Intent signup_intent = new Intent(this, SignupActivity.class);
+
+        startActivity(signup_intent);
     }
 }
